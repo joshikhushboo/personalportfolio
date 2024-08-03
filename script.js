@@ -50,7 +50,7 @@ $(document).ready(function() {
     //cv download
     function downloadcv() {
         // Assuming your CV file is named 'YourCV.pdf' and located in the same directory as this HTML file
-        window.location.href = "Purple and White Clean and Professional Resume.pdf";
+        window.location.href = "Frehser_resume.pdf";
     }
 
     // owl carousel script
