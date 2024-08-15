@@ -47,13 +47,10 @@ $(document).ready(function() {
         backSpeed: 60,
         loop: true
     });
-    //cv download
-    function downloadcv() {
-        // Assuming your CV file is named 'YourCV.pdf' and located in the same directory as this HTML file
-        window.location.href = "Frehser_resume.pdf";
-    }
 
-    // owl carousel script
+    // CV download
+
+    // Owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
@@ -74,5 +71,23 @@ $(document).ready(function() {
                 nav: false
             }
         }
+    });
+
+    // Initialize EmailJS with your user ID
+    emailjs.init("vl1zGPErZS7ZgF_Ps"); // Replace with your actual EmailJS Public Key
+
+    // Form submission handler
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Use EmailJS to send the email
+        emailjs.sendForm("service_bmqxbva", "template_a1p7vxp", this)
+            .then(function(response) {
+                console.log("Sent successfully:", response);
+                alert("Your message has been sent successfully!");
+            }, function(error) {
+                console.error("Failed to send:", error);
+                alert("Failed to send your message. Please try again.");
+            });
     });
 });

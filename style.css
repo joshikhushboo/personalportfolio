@@ -486,6 +486,10 @@ button:hover {
     width: 60%;
 }
 
+.skills-content .right .nodejs::before {
+    width: 40%;
+}
+
 .skills-content .right .Cpp::before {
     width: 70%;
 }

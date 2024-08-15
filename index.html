@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
 
 <head>
@@ -13,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +26,8 @@
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#Projects" class="menu-btn">Projects</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <!-- Corrected the href -->
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -43,7 +43,6 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Khushboo Joshi</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-
             </div>
         </div>
     </section>
@@ -60,7 +59,7 @@
                     <div class="text">I'm Khushboo and I'm a <span class="typing-2"></span></div>
                     <p>I am a passionate and dedicated web developer with a keen interest in creating engaging and user-friendly websites. Currently pursuing a Bachelor of Technology in Computer Science with a specialization in AI & ML, I have a solid foundation
                         in web development technologies such as HTML, CSS, and JavaScript, along with proficiency in C++, Python, and SQL. I am constantly seeking opportunities to expand my skills and contribute to innovative projects that make a positive
-                        impact..
+                        impact.
                     </p>
                     <button onclick="downloadcv()">Download CV</button>
                 </div>
@@ -69,62 +68,70 @@
     </section>
     <hr>
 
-    <!-- project section start -->
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">My skills</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">My creative skills & experiences.</div>
+                    <p>I am a creative and enthusiastic web developer with a passion for designing user-friendly interfaces and visually appealing graphics. Proficient in HTML, CSS, and JavaScript. With a keen eye for detail and a drive to learn, I am excited
+                        to contribute my skills to innovative projects and continue to grow as a professional in the field.</p>
 
-    < <!-- skills section start -->
-        <section class="skills" id="skills">
-            <div class="max-width">
-                <h2 class="title">My skills</h2>
-                <div class="skills-content">
-                    <div class="column left">
-                        <div class="text">My creative skills & experiences.</div>
-                        <p>I am a creative and enthusiastic web developer with a passion for designing user-friendly interfaces and visually appealing graphics. Proficient in HTML, CSS, and JavaScript. With a keen eye for detail and a drive to learn, I am
-                            excited to contribute my skills to innovative projects and continue to grow as a professional in the field.</p>
-                        <a href="#">Read more</a>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML5</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line html"></div>
                     </div>
-                    <div class="column right">
-                        <div class="bars">
-                            <div class="info">
-                                <span>HTML</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="line html"></div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>80%</span>
                         </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>CSS</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="line css"></div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>60%</span>
                         </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>JavaScript</span>
-                                <span>60%</span>
-                            </div>
-                            <div class="line js"></div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Node.js</span>
+                            <span>40%</span>
                         </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>C++</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="line Cpp"></div>
+                        <div class="line nodejs"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>C++</span>
+                            <span>70%</span>
                         </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>MySQL</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="line mysql"></div>
+                        <div class="line Cpp"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>80%</span>
                         </div>
+                        <div class="line mysql"></div>
                     </div>
                 </div>
             </div>
-        </section>
-        <hr>
-        <!-- Project section start -->
-        <section id="my projects" class="projects-section">
+        </div>
+    </section>
+    <hr>
+
+    <!-- project section start -->
+    <section id="projects" class="projects-section">
+
+        <div class="max-width">
             <h2 class="title">My Projects</h2>
             <div class="projects-grid">
                 <a href="https://joshikhushboo.github.io/codeplayers/" target="_blank" class="project project-tile">
@@ -133,91 +140,93 @@
                         Code Player
                     </p>
                 </a>
-                <a href="https://joshikhushboo.github.io/typinggame/" target="_blank " class="project project-tile ">
-                    <img class="project-image" src="Screenshot 2024-05-14 235416.png" alt="project " />
+                <a href="https://joshikhushboo.github.io/typinggame/" target="_blank" class="project project-tile">
+                    <img class="project-image" src="Screenshot 2024-05-14 235416.png" alt="project" />
                     <p class="project-title">
                         Typing Game
                     </p>
                 </a>
-                <a href="https://joshikhushboo.github.io/temperatureconv/" target="_blank " class="project project-tile ">
-                    <img class="project-image" src="Screenshot 2024-05-15 065632.png" alt="project " />
+                <a href="https://joshikhushboo.github.io/temperatureconv/" target="_blank" class="project project-tile">
+                    <img class="project-image" src="Screenshot 2024-05-15 065632.png" alt="project" />
                     <p class="project-title">
                         Temperature Converter
                     </p>
                 </a>
             </div>
-        </section>
-        <hr>
+        </div>
+    </section>
+    <hr>
 
-        <!-- contact section start -->
-        <section class="contact " id="contact ">
-            <div class="max-width ">
-                <h2 class="title ">Contact me</h2>
-                <div class="contact-content ">
-                    <div class="column left ">
-                        <div class="text ">Get in Touch</div>
-                        <div class="icons ">
-                            <div class="row ">
-                                <i class="fas fa-user "></i>
-                                <div class="info ">
-                                    <div class="head ">Name</div>
-                                    <div class="sub-title ">Khushboo Joshi</div>
-                                </div>
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Khushboo Joshi</div>
                             </div>
-                            <div class="row ">
-                                <i class="fas fa-map-marker-alt "></i>
-                                <div class="info ">
-                                    <div class="head ">Address</div>
-                                    <div class="sub-title ">Ghaziabad, Uttar Pradesh</div>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Ghaziabad, Uttar Pradesh</div>
                             </div>
-                            <div class="row ">
-                                <i class="fas fa-envelope "></i>
-                                <div class="info ">
-                                    <div class="head ">Email</div>
-                                    <div class="sub-title ">khushboojoshi486@gmail.com</div>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">khushboojoshi486@gmail.com</div>
                             </div>
                         </div>
                     </div>
-                    <div class="column right ">
-                        <div class="text ">Message me</div>
-                        <form action="# ">
-                            <div class="fields ">
-                                <div class="field name ">
-                                    <input type="text " placeholder="Name " required>
-                                </div>
-                                <div class="field email ">
-                                    <input type="email " placeholder="Email " required>
-                                </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form id="contactForm">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
-                            <div class="field ">
-                                <input type="text " placeholder="Subject " required>
+                            <div class="field email">
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
-                            <div class="field textarea ">
-                                <textarea cols="30 " rows="10 " placeholder="Message.. " required></textarea>
-                            </div>
-                            <div class="button-area ">
-                                <button type="submit">Send message</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea name="message" cols="30" rows="10" placeholder="Message.." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- footer section start -->
-        <footer>
-            <span>Created By <a href="https://www.linkedin.com/in/khushboojoshi2007/ ">KhushbooJoshi</a> | <span class="far fa-copyright "></span> 2024 All rights reserved.</span>
-        </footer>
-        <script>
-            function downloadcv() {
-                // Assuming your CV file is named 'YourCV.pdf' and located in the same directory as this HTML file
-                window.location.href = 'Purple and White Clean and Professional Resume.pdf';
-            }
-        </script>
 
-        <script src="script.js "></script>
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <a href="https://www.linkedin.com/in/khushboojoshi2007/">KhushbooJoshi</a> | <span class="far fa-copyright "></span> 2024 All rights reserved.</span>
+    </footer>
+
+    <script>
+        function downloadcv() {
+            window.location.href = 'FresherResume.pdf';
+        }
+    </script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
